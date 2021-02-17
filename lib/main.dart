@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import './firstRoute.dart';
+import './mCard.dart';
+import './home.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -14,7 +17,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Sign in'),
+      // home: MyHomePage(title: 'Sign in'),
+      //  home : CardGenerator()
+         home : Home()
+    
     );
   }
 }
@@ -85,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => FirstRoute()),
+                                  builder: (context) => PostDetails(id : 3)),
                             );
                           }
                         },
@@ -105,6 +111,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               )),
-            ))));
+            )))
+            );
   }
 }
+
+
+class CardGenerator extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          title: Text("My First App"),
+        ),
+      body : MCard(),
+    ) ;
+  }
+}
+
+
+
