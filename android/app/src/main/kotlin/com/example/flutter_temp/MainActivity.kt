@@ -1,4 +1,4 @@
-package com.example.flutter_temp
+package com.cam.demo
 
 import io.flutter.embedding.android.FlutterActivity
 
